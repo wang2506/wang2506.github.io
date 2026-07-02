@@ -1,31 +1,78 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# Personal Academic Website
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+A clean, warm personal site built with plain HTML + CSS. No build tools, no frameworks — just edit and push.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+## File structure
 
-# Instructions
+```
+.
+├── index.html          ← all your content lives here
+├── assets/
+│   ├── style.css       ← all styles
+│   ├── main.js         ← scroll-spy nav
+│   ├── photo.jpg       ← your headshot (add this yourself)
+│   └── cv.pdf          ← your CV (add this yourself)
+├── CNAME               ← custom domain config (see below)
+└── README.md
+```
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## Deploying to GitHub Pages
 
-See more info at https://academicpages.github.io/
+1. Push this folder to a GitHub repo named `yourusername.github.io`
+2. Go to the repo → **Settings** → **Pages**
+3. Under "Source", select **Deploy from a branch** → `main` → `/ (root)`
+4. Your site will be live at `https://yourusername.github.io` within a minute or two
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+> If you're replacing an existing Academic Pages site, just delete everything in the repo and push these files instead.
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+## Editing your content
 
-# Changelog -- bugfixes and enhancements
+All the content you need to update is in `index.html`. Search for `✏️` to find every placeholder:
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+| What | Where in index.html |
+|---|---|
+| Your name | `<title>` tag + `.name-block` in sidebar + `<h1>` in hero |
+| Role / affiliation | `.role` in sidebar + `.subtitle` in hero |
+| About blurb | First two `<p>` tags inside `.hero-text` |
+| Photo | Uncomment `<img>` in `.photo-wrap`, add `assets/photo.jpg` |
+| CV link | `<a href="assets/cv.pdf">` in sidebar |
+| Google Scholar / GitHub / Twitter | Links in `.sidebar-links` |
+| Papers | Duplicate the `<article class="paper">` block |
+| Courses | Duplicate the `<div class="course">` block |
+| Contact details | `.contact-grid` section |
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+## Adding your photo
+
+1. Export a square or portrait crop (at least 400px wide) as `photo.jpg`
+2. Put it in the `assets/` folder
+3. In `index.html`, find the `.photo-wrap` div and:
+   - Uncomment the `<img>` line
+   - Delete the `<svg>` placeholder and the `<span>` below it
+
+## Setting up a custom domain
+
+1. Buy a domain (e.g. `yourname.com`) from Namecheap, Cloudflare, Google Domains, etc.
+2. Open `CNAME` in this repo and replace the comments with just your domain:
+   ```
+   yourname.com
+   ```
+3. At your registrar's DNS settings, add a CNAME record:
+   - **Name/Host**: `@` (or `www`)
+   - **Value/Target**: `yourusername.github.io`
+4. In GitHub repo Settings → Pages, enter your custom domain
+5. Check "Enforce HTTPS" once it's verified (takes up to 24h for DNS to propagate)
+
+## Customising the look
+
+All visual tokens are CSS variables at the top of `assets/style.css`:
+
+```css
+:root {
+  --sand: #F5F1EA;       /* page background */
+  --terra: #B86B3E;      /* accent color — links, badges, dots */
+  --charcoal: #2C2925;   /* primary text */
+  ...
+}
+```
+
+Change `--terra` to tweak the accent color across the whole site.
