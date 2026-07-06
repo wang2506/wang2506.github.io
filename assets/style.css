@@ -170,6 +170,15 @@ main { padding: 3rem 0 4rem 3rem; }
   margin-bottom: 0.75rem;
 }
 
+.hero-text a {
+  color: var(--terra);
+  text-decoration-color: color-mix(in srgb, var(--terra) 40%, transparent);
+  text-underline-offset: 3px;
+}
+.hero-text a:hover {
+  text-decoration-color: var(--terra);
+}
+
 .photo-wrap {
   width: 200px;
   height: 260px;
