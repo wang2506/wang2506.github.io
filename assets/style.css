@@ -452,6 +452,13 @@ section > p a:hover { text-decoration: underline; }
   .photo-wrap { display: none; }
   */
 
+  .photo-wrap {
+    order: -1;
+    width: 140px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+  }
+
   .hero-text h1 { font-size: 2rem; }
 
   .contact-grid { grid-template-columns: 1fr; max-width: 100%; }
