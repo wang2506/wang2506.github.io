@@ -418,8 +418,13 @@ section > p a:hover { text-decoration: underline; }
   .name-block { margin-bottom: 0; }
   .name-block .role { display: none; }
 
-  nav ul { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+  /* nav ul { display: flex; gap: 0.25rem; flex-wrap: wrap; }
   .sidebar-links { display: none; }
+  */ 
+  
+  .sidebar-links .affil { display: none; }
+  .sidebar-links a { display: inline; }  
+  
 
   main { padding: 2rem 1.5rem 3rem; }
 

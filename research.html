@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Research — Henry Su Wang</title>
+  <meta name="description" content="Research of Henry Su Wang: distributed and federated learning as a foundation for learning-native wireless communications and 6G/NextG systems." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<div class="site-wrapper">
+
+  <!-- ═══════════════════════════════
+       SIDEBAR
+       ═══════════════════════════════ -->
+  <aside>
+	<div>
+      <div class="name-block">
+        <span class="last">Henry Su Wang</span>
+        <div class="role">
+          Postdoc &amp; Lecturer<br />
+          Princeton University
+        </div>
+      </div>
+
+	  <nav aria-label='Site navigation'>
+        <ul>
+          <li><a href="index.html"><span class="nav-dot" aria-hidden="true"></span>About</a></li>
+          <li><a href="research.html" class="active"><span class="nav-dot" aria-hidden="true"></span>Research</a></li>
+          <li><a href="teaching.html"><span class="nav-dot" aria-hidden="true"></span>Teaching</a></li>
+          <li><a href="index.html#contact"><span class="nav-dot" aria-hidden="true"></span>Contact</a></li>
+        </ul>
+      </nav>
+	</div>
+
+    <div class="sidebar-links">
+      <div class="affil">
+        Department of Electrical and Computer Engineering<br />
+        Princeton University
+      </div>
+      <a href="assets/Henry_CV_7-1_2026.pdf"                                      target="_blank" rel="noopener">CV [Updated 7/2026]</a>
+      <a href="https://scholar.google.com/citations?user=_dNSQR4AAAAJ&hl=en"      target="_blank" rel="noopener">Google Scholar</a>
+	  <a href="https://www.linkedin.com/in/henry-wang-b57571156/"                 target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </aside>
+
+
+  <!-- ═══════════════════════════════
+       MAIN CONTENT - RESEARCH
+       ═══════════════════════════════ -->
+  <main>
+
+    <!-- ── INTRO / OVERVIEW ── -->
+    <section id="research" class="hero">
+      <div class="hero-text">
+        <div class="accent-rule"></div>
+
+        <div class="section-label">Research</div>
+        <h2>Overview</h2>
+
+        <p>
+          My research brings distributed and federated learning into the wireless physical and network layer,
+          with the goal of making learning a native capability of <strong>6G/NextG</strong> systems rather than
+          a black box bolted on top. Getting machine intelligence to work over real networks &mdash; where
+          devices, data, channels, and objectives all differ &mdash; is a foundational problem I've spent my
+          Ph.D. and postdoc developing tools for. I'm now applying those tools where I think they matter most:
+          inside the communication system itself, in problems like beamforming, semantic communications, and
+          resource allocation for future wireless networks.
+        </p>
+      </div>
+    </section>
+
+
+    <hr class="divider" />
+
+
+    <!-- ══════════════════════════════════════════
+         PILLAR 1 — LEARNING-NATIVE WIRELESS
+         ══════════════════════════════════════════ -->
+    <section id="wireless">
+      <div class="section-label">Research Thread</div>
+      <h2>Learning-Native Wireless Communications (6G / NextG)</h2>
+
+      <p>
+        Most machine learning for wireless treats the communication system as fixed and the model as a black box.
+        I take the opposite view: that the <em>structure</em> of a wireless problem &mdash; its physics, its
+        optimization landscape, its distributed nature &mdash; should shape the learning architecture itself.
+        My work here designs learning methods that are native to the communication system rather than generic,
+        using distributed and unrolled optimization to build new physical- and network-layer capabilities.
+      </p>
+
+      <p>
+        A representative direction is <strong>distributed Airy beamforming via federated network unrolling</strong>
+        (ongoing work), where beamforming optimization is cast as a learned, unrollable procedure distributed
+        across the network &mdash; a concrete bridge between the distributed-learning tools I've developed and the
+        wireless PHY. Related work includes <strong>holographic beamforming for semantic communications</strong>,
+        which explores how learning can reshape what a communication system chooses to transmit in the first place.
+      </p>
+
+      <div class="paper-list">
+
+        <article class="paper">
+          <div>
+            <h3>Distributed Airy Beamforming via Federated Network Unrolling</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, S. Zeng, B. Peleato, M. Chiang, H. V. Poor
+            </div>
+            <div class="venue">
+              To be submitted to IEEE Transactions on Wireless Communications
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[Coming soon]</a>
+            </div>
+          </div>
+          <div class="year-badge">Ongoing</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Holographic Beamforming for Semantic Communications</h3>
+            <div class="authors">
+              S. Zeng, H. Zhang, <strong>S. Wang</strong>, B. Di, H. Zhang, D. Niyato, Z. Han, H. V. Poor, L. Song
+            </div>
+            <div class="venue">
+              IEEE Transactions on Wireless Communications
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2026</div>
+        </article>
+
+      </div><!-- /.paper-list -->
+    </section>
+
+
+    <hr class="divider" />
+
+
+    <!-- ══════════════════════════════════════════
+         PILLAR 2 — DISTRIBUTED & FEDERATED LEARNING
+         ══════════════════════════════════════════ -->
+    <section id="federated-learning">
+      <div class="section-label">Research Thread</div>
+      <h2>Distributed &amp; Federated Learning over Heterogeneous Networks</h2>
+
+      <p>
+        Before machine intelligence can live inside a wireless system, it has to survive the network: unreliable
+        links, limited communication budgets, and devices whose hardware, data, and goals all differ. This
+        heterogeneity is something standard distributed and federated approaches simplify away, but that realistic
+        edge, fog, and IoT deployments cannot avoid. My doctoral and postdoctoral work develops the theory and
+        algorithms that make distributed learning work under these conditions &mdash; treating it as foundational
+        infrastructure for learning-native networks rather than an end in itself.
+      </p>
+
+      <p>
+        This thread spans network-aware optimization of distributed learning, device sampling and resource
+        optimization for heterogeneous federated learning, online and personalized learning over multi-tiered
+        networks, and server placement for vertical FL in dynamic edge/fog networks. More recent work extends
+        these methods toward serverless and decentralized settings, and toward the robustness of learning-based
+        wireless components &mdash; for example, defending federated signal classifiers against evasion attacks.
+      </p>
+
+      <div class="paper-list">
+
+        <article class="paper">
+          <div>
+            <h3>Optimizing Server Placement for Vertical Federated Learning in Dynamic Edge/Fog Networks</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, M. Chiang, H. V. Poor
+            </div>
+            <div class="venue">
+              IEEE/ACM Transactions on Networking
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2026</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Mitigating Evasion Attacks in Federated Learning-Based Signal Classifiers</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, R. Sahay, A. Piaseczny, C. Brinton
+            </div>
+            <div class="venue">
+              IEEE Transactions on Network Science and Engineering
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2025</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Device Sampling and Resource Optimization for Federated Learning in Cooperative Edge Networks</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, R. Morabito, S. Hosseinalipour, M. Chiang, C. Brinton
+            </div>
+            <div class="venue">
+              IEEE/ACM Transactions on Networking
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2024</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Multi-Source to Multi-Target Decentralized Federated Domain Adaptation</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, S. Hosseinalipour, C. Brinton
+            </div>
+            <div class="venue">
+              IEEE Transactions on Cognitive Communications and Networking
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2024</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Towards Cooperative Federated Learning over Heterogeneous Edge/Fog Networks</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, S. Hosseinalipour, V. Aggarwal, C. Brinton, D. Love, W. Su, M. Chiang
+            </div>
+            <div class="venue">
+              IEEE Communications Magazine
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2023</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>UAV-assisted Online Machine Learning over Multi-Tiered Networks: A Hierarchical Nested Personalized Federated Learning Approach</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, S. Hosseinalipour, M. Gorlatova, C. Brinton, M. Chiang
+            </div>
+            <div class="venue">
+              IEEE Transactions on Network and Service Management
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2022</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Parallel Successive Learning for Online Distributed Model Training over Heterogeneous Wireless Networks</h3>
+            <div class="authors">
+              S. Hosseinalipour, <strong>S. Wang</strong>, N. Michelusi, V. Aggarwal, C. Brinton, D. Love, M. Chiang
+            </div>
+            <div class="venue">
+              IEEE/ACM Transactions on Networking
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2022</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Device Sampling for Heterogeneous Federated Learning: Theory, Algorithms, and Implementation</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, M. Lee, S. Hosseinalipour, R. Morabito, M. Chiang, C. Brinton
+            </div>
+            <div class="venue">
+              IEEE INFOCOM &middot; 19.9% acceptance rate
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2021</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Network-Aware Optimization of Distributed Learning for Fog Computing</h3>
+            <div class="authors">
+              <strong>S. Wang</strong>, Y. Ruan, Y. Tu, S. Wagle, C. Brinton, C. Joe-Wong
+            </div>
+            <div class="venue">
+              IEEE/ACM Transactions on Networking
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2021</div>
+        </article>
+
+      </div><!-- /.paper-list -->
+    </section>
+
+
+    <hr class="divider" />
+
+
+    <!-- ══════════════════════════════════════════
+         RECENT & ONGOING DIRECTIONS
+         ══════════════════════════════════════════ -->
+    <section id="ongoing">
+      <div class="section-label">Recent &amp; Ongoing</div>
+      <h2>Recent &amp; Ongoing Directions</h2>
+
+      <p>
+        Alongside these two threads, I work with students on emerging directions at the edge of learning and
+        wireless systems: communication-efficient multimodal federated learning, controllable LLM offloading and
+        routing for edge deployment, federated unlearning for generative models, and low-cost RF fingerprinting
+        via TinyML. Several of these are led by undergraduate and graduate researchers I mentor.
+      </p>
+
+      <div class="paper-list">
+
+        <article class="paper">
+          <div>
+            <h3>Communication-Efficient Multimodal Federated Learning: Joint Modality and Client Selection</h3>
+            <div class="authors">
+              L. Yuan, D. Han, <strong>S. Wang</strong>, D. Upadhyay, C. Brinton
+            </div>
+            <div class="venue">
+              IEEE Transactions on Mobile Computing
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2026</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Routing Without Training: Controllable-Ratio LLM Offloading via Reliability Gating</h3>
+            <div class="authors">
+              E. Chen, <strong>S. Wang</strong>, D. J. Han, S. Q. Wang, K. Chan, C. Brinton
+            </div>
+            <div class="venue">
+              Under review &middot; NeurIPS
+            </div>
+            <div class="paper-links">
+              <a href="#" target="_blank" rel="noopener">[Coming soon]</a>
+            </div>
+          </div>
+          <div class="year-badge">Under review</div>
+        </article>
+
+      </div><!-- /.paper-list -->
+
+      <p>
+        For a complete and up-to-date list of publications, please see my
+        <a href="https://scholar.google.com/citations?user=_dNSQR4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        profile or my <a href="assets/Henry_CV_7-1_2026.pdf" target="_blank" rel="noopener">CV</a>.
+      </p>
+
+      <a href="index.html#contact" class="btn">Get in touch &rarr;</a>
+    </section>
+
+  </main>
+</div><!-- /.site-wrapper -->
+
+<script src="assets/main.js"></script>
+</body>
+</html>
