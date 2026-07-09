@@ -38,11 +38,12 @@
           <li><a href="index.html"><span class="nav-dot" aria-hidden="true"></span>About</a></li>
           <li><a href="research.html" class="active"><span class="nav-dot" aria-hidden="true"></span>Research</a></li>
           <!-- <li><a href="teaching.html"><span class="nav-dot" aria-hidden="true"></span>Teaching</a></li> -->
+		  <li><a href="talks.html" class="active"><span class="nav-dot" aria-hidden="true"></span>Talks and Presentations</a></li>
           <li><a href="index.html#contact"><span class="nav-dot" aria-hidden="true"></span>Contact</a></li>
         </ul>
       </nav>
 	</div>
-
+	
     <div class="sidebar-links">
       <div class="affil">
         Department of Electrical and Computer Engineering<br />
@@ -69,28 +70,31 @@
         <h2>Overview</h2>
 
         <p>
+		  <!-- 
           To make machine learning (and intelligence more generally) into a native capability of 5G/6G/NextG systems, my research aims to embed distributed and federated learning into the wireless physical and network layers. 
 		  <!-- 
           with the goal of making machine learning (and intelligence more generally) a native capability of 5G/6G/NextG systems. <!-- developing novel methodologies for. --> 
-		  Here, distributed and federated learning are the foundation 
-		  
-		  Getting ML training to work over practical edge/fog networks, where devices, data, channels, and goals all differ, is a foundational capability that I've been advancing throughout my Ph.D. pushing forwards. 
-		  That remains an open problem I actively push on, even as I simultaneously adapt these same methodologies to operate within communication systems, under the distinct constraints they impose.
-		  
-		  My development of such novel approaches continues but <strong>simultaneously</strong> adapting these methodologies inside communication systems, with consideration of the unique conditions thereof. 
-		  These integrations are key in advancing semantic communications, beamforming, and resource allocation for current and future wireless networks. 
+		  <!-- 
+		  Here, distributed and federated learning act as the foundational infrastructure (which I've started developing during my Ph.D.) through which novel wireless communications capabilities can be discovered, developed, and deployed.  
+		  These integrations are key in advancing semantic communications, beamforming, and resource allocation for current and future wireless networks. -->
+		  Specifically, my work brings <strong>distributed and federated learning into the wireless layer</strong>, with the goal of making machine learning (and intelligence more generally) a native capability of 5G/6G/NextG systems. My work first establishes the foundation by getting machine learning, both <strong>training and inference</strong>, to effectively operate over practical networks. These networks suffer from pervasive heterogeneity, spanning hardware, data, wireless links, and goals. Standard federated approaches simplify certain aspects, but realistic IoT and edge deployments cannot. I then build on this foundation to create novel <strong>learning-native wireless capabilities</strong>, such as semantic communications and intelligent beamforming for future communication systems. 
         </p>
       </div>
     </section>
 	
+		<!-- new research summary --> 
+		<!-- this is a great summary, but move to research.html to minimize redundancy 
+		<p>
+		  Specifically, my work brings <strong>distributed and federated learning into the wireless layer</strong>, with the goal of making machine learning (and intelligence more generally) a native capability of 5G/6G/NextG systems. My work first establishes the foundation by getting machine learning, both <strong>training and inference</strong>, to effectively operate over practical networks. These networks suffer from pervasive heterogeneity, spanning hardware, data, wireless links, and goals. Standard federated approaches simplify certain aspects, but realistic IoT and edge deployments cannot. I then build on this foundation to create novel learning-native wireless capabilities, such as semantic communications and intelligent beamforming for future communication systems. 
+		</p>
+		-->
 	
 	<!-- distributed learning over heterogeneous, unreliable networks is a foundational capability, and I'm building it into the wireless physical and network layer for 6G/NextG. --> 
-
-    <hr class="divider" />
-
+	
+    <!-- <hr class="divider" /> --> 
 
     <!-- ══════════════════════════════════════════
-         PILLAR 1 — LEARNING-NATIVE WIRELESS
+         PILLAR 1 — DISTRIBUTED & FEDERATED LEARNING
          ══════════════════════════════════════════ -->
     <section id="wireless">
       <div class="section-label">Research Thread</div>
@@ -103,7 +107,7 @@
         My work here designs learning methods that are native to the communication system rather than generic,
         using distributed and unrolled optimization to build new physical- and network-layer capabilities.
       </p>
-
+	
       <p>
         A representative direction is <strong>distributed Airy beamforming via federated network unrolling</strong>
         (ongoing work), where beamforming optimization is cast as a learned, unrollable procedure distributed
@@ -154,11 +158,11 @@
 
 
     <!-- ══════════════════════════════════════════
-         PILLAR 2 — DISTRIBUTED & FEDERATED LEARNING
+         PILLAR 2 — LEARNING-NATIVE WIRELESS
          ══════════════════════════════════════════ -->
     <section id="federated-learning">
       <div class="section-label">Research Thread</div>
-      <h2>Distributed &amp; Federated Learning over Heterogeneous Networks</h2>
+      <h2>Distributed &amp; Federated Intelligence \\ over Heterogeneous Edge/Fog Networks</h2>
 
       <p>
         Before machine intelligence can live inside a wireless system, it has to survive the network: unreliable
@@ -168,7 +172,7 @@
         algorithms that make distributed learning work under these conditions &mdash; treating it as foundational
         infrastructure for learning-native networks rather than an end in itself.
       </p>
-
+	
       <p>
         This thread spans network-aware optimization of distributed learning, device sampling and resource
         optimization for heterogeneous federated learning, online and personalized learning over multi-tiered
@@ -176,8 +180,11 @@
         these methods toward serverless and decentralized settings, and toward the robustness of learning-based
         wireless components &mdash; for example, defending federated signal classifiers against evasion attacks.
       </p>
-
+	
+	
       <div class="paper-list">
+
+	  <strong>Selected Publications</strong>
 
         <article class="paper">
           <div>
@@ -219,22 +226,6 @@
             </div>
             <div class="venue">
               IEEE/ACM Transactions on Networking
-            </div>
-            <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[PDF]</a>
-            </div>
-          </div>
-          <div class="year-badge">2024</div>
-        </article>
-
-        <article class="paper">
-          <div>
-            <h3>Multi-Source to Multi-Target Decentralized Federated Domain Adaptation</h3>
-            <div class="authors">
-              <strong>S. Wang</strong>, S. Hosseinalipour, C. Brinton
-            </div>
-            <div class="venue">
-              IEEE Transactions on Cognitive Communications and Networking
             </div>
             <div class="paper-links">
               <a href="#" target="_blank" rel="noopener">[PDF]</a>
@@ -289,38 +280,6 @@
             </div>
           </div>
           <div class="year-badge">2022</div>
-        </article>
-
-        <article class="paper">
-          <div>
-            <h3>Device Sampling for Heterogeneous Federated Learning: Theory, Algorithms, and Implementation</h3>
-            <div class="authors">
-              <strong>S. Wang</strong>, M. Lee, S. Hosseinalipour, R. Morabito, M. Chiang, C. Brinton
-            </div>
-            <div class="venue">
-              IEEE INFOCOM &middot; 19.9% acceptance rate
-            </div>
-            <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[PDF]</a>
-            </div>
-          </div>
-          <div class="year-badge">2021</div>
-        </article>
-
-        <article class="paper">
-          <div>
-            <h3>Network-Aware Optimization of Distributed Learning for Fog Computing</h3>
-            <div class="authors">
-              <strong>S. Wang</strong>, Y. Ruan, Y. Tu, S. Wagle, C. Brinton, C. Joe-Wong
-            </div>
-            <div class="venue">
-              IEEE/ACM Transactions on Networking
-            </div>
-            <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[PDF]</a>
-            </div>
-          </div>
-          <div class="year-badge">2021</div>
         </article>
 
       </div><!-- /.paper-list -->
