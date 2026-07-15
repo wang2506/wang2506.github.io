@@ -109,8 +109,9 @@
       <p>
 		Distributed and federated learning approaches have become popular techniques to enable training and inference of ML models (collectively, machine intelligence) across practical edge/fog networks. 
 		Yet, standard approaches largely overlook the heterogeneity inherent to these environments, which includes not only computation and communication differences but also unique local dataset statistics across devices. 
-		These coupled forms of heterogeneity reshape both how models train and how they are served, degrading task performance and inflating resource cost on edge/fog networks.
-		My research aims to overcome this heterogeneity and, in turn, to control and optimize distributed machine intelligence under joint resource and performance constraints, ultimately enabling federated intelligence to serve as infrastructure for AI-native wireless systems.
+		As these coupled forms of heterogeneity thus reshape both how models train and how they are served, improper treatment of them leads to degrading task performance and inflating resource cost on edge/fog networks.
+		
+		<!-- My research aims to overcome this heterogeneity and, in turn, to control and optimize distributed machine intelligence under joint resource and performance constraints, ultimately enabling federated intelligence to serve as infrastructure for AI-native wireless systems. -->
       </p>
 	
 		<!-- excellent phrase from chris - diverse local dataset statistics -->
@@ -134,7 +135,7 @@
 		--> 	
 	
       <p> 
-		My work pursues the underlying control problem, namely trading performance against resource cost under extensive network heterogeneity, across the full cycle from (federated) training to (collaborative) inference. 
+		My work pursues the underlying control problem, namely to understand the relationships between performance versus resource costs under extensive network heterogeneity, across the full cycle from (federated) training to (collaborative) inference. 
 		On the training side, my recent work develops control and optimization methodologies that confront challenging forms of heterogeneity, from data-feature heterogeneity in dynamic networks, where devices with distinct data features may enter and exit the network, to new forms of device-to-device cooperation that inform intelligent device sampling. 
 		Most recently, my emerging work has begun to explore performance–resource balancing across edge–cloud systems to enable LLM inference for broader applications.
 		Experimentally, these proposed methodologies have yielded up to 50% improved resource efficiency, while even offering performance improvements.
@@ -155,7 +156,7 @@
               IEEE/ACM Transactions on Networking
             </div>
             <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+              <a href="https://arxiv.org/pdf/2605.09813" target="_blank" rel="noopener">[PDF]</a>
             </div>
           </div>
           <div class="year-badge">2026</div>
@@ -171,7 +172,7 @@
               IEEE/ACM Transactions on Networking
             </div>
             <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+              <a href="https://arxiv.org/pdf/2311.04350" target="_blank" rel="noopener">[PDF]</a>
             </div>
           </div>
           <div class="year-badge">2024</div>
@@ -187,7 +188,7 @@
               Under review &middot; NeurIPS
             </div>
             <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[Coming soon]</a>
+              <!-- <a href="#" target="_blank" rel="noopener">[Coming soon]</a> -->
             </div>
           </div>
           <div class="year-badge">Under review</div>
@@ -201,50 +202,42 @@
 
 
     <!-- ══════════════════════════════════════════
-         PILLAR 2 — LEARNING-NATIVE WIRELESS
+         PILLAR 2 — AI-NATIVE WIRELESS
          ══════════════════════════════════════════ -->	 
 		 
 		 
     <section id="wireless">
       <div class="section-label">Research Thread</div>
-      <h2>Learning-Native Wireless Communications <br> Towards 6G / NextG</h2>
+      <h2>Towards AI-Native Wireless <br> Communications in 6G / NextG</h2>
 
       <p>
-        Most machine learning for wireless treats the communication system as fixed and the model as a black box.
-		However, the structure of wireless problems, with particular focus towards its physics, optimization landscape, and distributed properties, should influence the learning architecture, what is learned, and the learning process itself. 
-		My work, and vision, here focuses on 
+		The coupled growth of machine learning and of communication pervasiveness across devices is unlocking new capabilities for wireless networks, as evidenced by systems that convey meaning rather than bits, or that sense and classify the spectrum they operate in. 
+		Neither the extent of these capabilities nor the core principles underlying them are yet well understood, presenting an opportunity to establish what machine intelligence native to 6G/NextG systems should look like. 
+		In doing so, we must contend with the distributed nature of such systems, which feature varying computation, data statistics, and channel conditions across network devices.
+      </p>
 		
-        I take the opposite view: that the <em>structure</em> of a wireless problem &mdash; its physics, its
+	<!-- I take the opposite view: that the <em>structure</em> of a wireless problem &mdash; its physics, its
         optimization landscape, its distributed nature &mdash; should shape the learning architecture itself.
         My work here designs learning methods that are native to the communication system rather than generic,
-        using distributed and unrolled optimization to build new physical- and network-layer capabilities.
+        using distributed and unrolled optimization to build new physical- and network-layer capabilities. 
+	-->
+	
+	<!-- Wireless is undergoing a fundamental shift in capabilities, due the coupled growth of ML and communication-capable devices. 
+		ML techniques enable new properties entirely, such as transmitting meaning rather than raw throughput in bits, while contemporary wireless networks demand novel features, such as signal classification for all devices. 
+		The combined potential of 
+		The full extent of these new opportunities is not yet clear, nor are their guiding principles fully understood. 
+	-->
+	
+      <p>
+		I am developing methodologies that pair learning with the physical and network layers of wireless systems. 
+		In the following representative works, I have investigated holographic beamforming for semantic communications, where reconfigurable surfaces are paired with learned encoding and decoding to shape what a transmitter conveys rather than only how it conveys it. Additionally, I have introduced FL methodologies for signal classification, characterizing them in the presence of evasion attacks crafted at the physical layer. 
+		Most recently, I have sought to further develop AI-native wireless systems, by adapting concepts from federated systems towards distributed Airy beamforming. 
       </p>
 		
-      <p>
-        A representative direction is <strong>distributed Airy beamforming via federated network unrolling</strong>
-        (ongoing work), where beamforming optimization is cast as a learned, unrollable procedure distributed
-        across the network &mdash; a concrete bridge between the distributed-learning tools I've developed and the
-        wireless PHY. Related work includes <strong>holographic beamforming for semantic communications</strong>,
-        which explores how learning can reshape what a communication system chooses to transmit in the first place.
-      </p>
+	<!-- I am developing methodologies that pair learning with the physical and network layers of wireless systems. In one direction, I have worked on holographic beamforming for semantic communications, where reconfigurable surfaces are paired with learned encoding and decoding, letting a transmitter shape what it conveys rather than only how it conveys it. Additionally, I develop federated learning methodologies for automatic modulation classification, and characterize how they hold up under evasion attacks crafted at the physical layer. Most recently, I am adapting the distributed learning tools from my prior thread to the wireless PHY: distributed Airy beamforming via federated network unrolling casts beamforming optimization as a learned, unrollable procedure distributed across the network.
+	-->
 		
       <div class="paper-list">
-
-        <article class="paper">
-          <div>
-            <h3>Holographic Beamforming for Semantic Communications</h3>
-            <div class="authors">
-              S. Zeng, H. Zhang, <strong>S. Wang</strong>, B. Di, H. Zhang, D. Niyato, Z. Han, H. V. Poor, L. Song
-            </div>
-            <div class="venue">
-              IEEE Transactions on Wireless Communications
-            </div>
-            <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[PDF]</a>
-            </div>
-          </div>
-          <div class="year-badge">2026</div>
-        </article>
 
         <article class="paper">
           <div>
@@ -256,10 +249,26 @@
               IEEE Transactions on Network Science and Engineering
             </div>
             <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+              <a href="https://arxiv.org/pdf/2306.04872" target="_blank" rel="noopener">[PDF]</a>
             </div>
           </div>
           <div class="year-badge">2025</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Holographic Beamforming for Semantic Communications</h3>
+            <div class="authors">
+              S. Zeng, H. Zhang, <strong>S. Wang</strong>, B. Di, H. Zhang, D. Niyato, Z. Han, H. V. Poor, L. Song
+            </div>
+            <div class="venue">
+              IEEE Transactions on Wireless Communications
+            </div>
+            <div class="paper-links">
+              <a href="https://arxiv.org/pdf/2606.20887" target="_blank" rel="noopener">[PDF]</a>
+            </div>
+          </div>
+          <div class="year-badge">2026</div>
         </article>
 
         <article class="paper">
@@ -272,7 +281,7 @@
               To be submitted to IEEE Transactions on Wireless Communications
             </div>
             <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[Coming soon]</a>
+              <!-- <a href="#" target="_blank" rel="noopener">[Coming soon]</a> -->
             </div>
           </div>
           <div class="year-badge">Ongoing</div>
@@ -288,14 +297,16 @@
          ══════════════════════════════════════════ -->
     <section id="ongoing">
       <div class="section-label">Recent &amp; Ongoing</div>
-      <h2>Recent &amp; Ongoing Directions</h2>
-
+      <h2>Emergent Directions </h2>
+	  <!-- Recent &amp; Ongoing Directions -->
+	  
       <p>
-        Alongside these two threads, I work with students on emerging directions at the edge of learning and
-        wireless systems: communication-efficient multimodal federated learning, controllable LLM offloading and
-        routing for edge deployment, federated unlearning for generative models, and low-cost RF fingerprinting
-        via TinyML. Several of these are led by undergraduate and graduate researchers I mentor.
+        Alongside these two threads, I have been working on emergent directions of distributed/federated intelligence and
+        wireless systems. 
+		Here, I have focused on advising mentees, including undergraduates at Princeton and Ph.D. collaborators at various institutions, in two main directions: (a) distributed and federated intelligence as a foundation for general cyber physical systems and (b) practical applications of machine learning, specifically federated unlearning and fast implementations on low-cost hardware (e.g., commoditized MCUs). 
       </p>
+		
+	  <!-- 		communication-efficient multimodal federated learning, controllable LLM offloading and routing for edge deployment, federated unlearning for generative models, and low-cost RF fingerprinting via TinyML. -->
 
       <div class="paper-list">
 
@@ -309,7 +320,7 @@
               IEEE Transactions on Mobile Computing
             </div>
             <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[PDF]</a>
+              <a href="https://arxiv.org/pdf/2401.16685" target="_blank" rel="noopener">[PDF]</a>
             </div>
           </div>
           <div class="year-badge">2026</div>
@@ -317,18 +328,34 @@
 
         <article class="paper">
           <div>
-            <h3>Routing Without Training: Controllable-Ratio LLM Offloading via Reliability Gating</h3>
+            <h3>Federated Unlearning for Text-to-Image Diffusion Models</h3>
             <div class="authors">
-              E. Chen, <strong>S. Wang</strong>, D. J. Han, S. Q. Wang, K. Chan, C. Brinton
+              N. Novello, <strong>S. Wang</strong>, D. Gunduz, M. Chiang, H. V. Poor, A. M. Tonello
             </div>
             <div class="venue">
-              Under review &middot; NeurIPS
+              To be submitted to ICLR.
             </div>
             <div class="paper-links">
-              <a href="#" target="_blank" rel="noopener">[Coming soon]</a>
+              <!--<a href="#" target="_blank" rel="noopener">[Coming soon]</a>-->
             </div>
           </div>
-          <div class="year-badge">Under review</div>
+          <div class="year-badge">Ongoing</div>
+        </article>
+
+        <article class="paper">
+          <div>
+            <h3>Towards Large-Scale RF Fingerprinting: TinyML on Low-Cost, Mass-Market MCUs</h3>
+            <div class="authors">
+              D. Zhang, H. Habib, <strong>S. Wang</strong>, S. Zeng, M. Chiang, H. V. Poor
+            </div>
+            <div class="venue">
+              To be submitted to ICC.
+            </div>
+            <div class="paper-links">
+              <!--<a href="#" target="_blank" rel="noopener">[Coming soon]</a>-->
+            </div>
+          </div>
+          <div class="year-badge">Ongoing</div>
         </article>
 
       </div><!-- /.paper-list -->
