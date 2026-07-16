@@ -11,14 +11,17 @@
   --white: #FDFCFA;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  font-size: 87.5%; /* 14px root — 10.5pt. Scales every rem on the site. */
+}
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--sand);
   color: var(--charcoal);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.55;
   min-height: 100vh;
 }
 
@@ -27,7 +30,7 @@ body {
   display: grid;
   grid-template-columns: 220px 1fr;
   min-height: 100vh;
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -130,12 +133,12 @@ main { padding: 3rem 0 4rem 3rem; }
 
 /* ── Hero ── */
 .hero {
-  padding-bottom: 3.5rem;
-  margin-bottom: 3.5rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
   border-bottom: 1px solid var(--sand-dark);
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 2rem;
+  gap: 1rem;
   align-items: start;
 }
 
@@ -165,8 +168,8 @@ main { padding: 3rem 0 4rem 3rem; }
 .hero-text p {
   font-size: 1rem;
   color: var(--charcoal-mid);
-  max-width: 480px;
-  line-height: 1.75;
+  max-width: 620px;
+  line-height: 1.55;
   margin-bottom: 0.75rem;
 }
 
@@ -231,7 +234,7 @@ section h2 {
 section > p {
   color: var(--charcoal-mid);
   margin-bottom: 1.25rem;
-  max-width: 560px;
+  max-width: 620px;
 }
 
 section > p a { color: var(--terra); text-decoration: none; }
@@ -311,6 +314,29 @@ section > p a:hover { text-decoration: underline; }
   white-space: nowrap;
   flex-shrink: 0;
 }
+
+
+/* ── Research figures ── */
+.research-figure {
+  max-width: 420px;
+  margin: 0 0 1.5rem;
+}
+
+.research-figure img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--sand-dark);
+}
+
+.research-figure figcaption {
+  font-size: 0.8rem;
+  color: var(--charcoal-light);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+
 
 /* ── Teaching ── */
 .course-list { display: flex; flex-direction: column; }
@@ -504,6 +530,12 @@ section > p a:hover { text-decoration: underline; }
   font-weight: 500;
   font-size: 0.82rem;
   margin-bottom: 0.1rem;
+}
+
+#talks.hero {
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: none;
 }
 
 @media (max-width: 700px) {

@@ -108,8 +108,14 @@
 
       <p>
 		Distributed and federated learning approaches have become popular techniques to enable training and inference of ML models (collectively, machine intelligence) across practical edge/fog networks. 
+		The coupled forms of heterogeneity inherent to such networks (e.g., computation and communication differences as well as unique local dataset statistics) require novel approaches that reshape 
+		both how models train and how they are served. 
+		Improper treatment can lead to degradation of task performance while simultaneously imflating resource costs on edge/fog networks. 
+		
+		<!-- 
 		Yet, standard approaches largely overlook the heterogeneity inherent to these environments, which includes not only computation and communication differences but also unique local dataset statistics across devices. 
 		As these coupled forms of heterogeneity thus reshape both how models train and how they are served, improper treatment of them leads to degrading task performance and inflating resource cost on edge/fog networks.
+		--> 
 		
 		<!-- My research aims to overcome this heterogeneity and, in turn, to control and optimize distributed machine intelligence under joint resource and performance constraints, ultimately enabling federated intelligence to serve as infrastructure for AI-native wireless systems. -->
       </p>
@@ -135,16 +141,16 @@
 		--> 	
 	
       <p> 
-		My work pursues the underlying control problem, namely to understand the relationships between performance versus resource costs under extensive network heterogeneity, across the full cycle from (federated) training to (collaborative) inference. 
-		On the training side, my recent work develops control and optimization methodologies that confront challenging forms of heterogeneity, from data-feature heterogeneity in dynamic networks, where devices with distinct data features may enter and exit the network, to new forms of device-to-device cooperation that inform intelligent device sampling. 
-		Most recently, my emerging work has begun to explore performance–resource balancing across edge–cloud systems to enable LLM inference for broader applications.
-		Experimentally, these proposed methodologies have yielded up to 50% improved resource efficiency, while even offering performance improvements.
+		My work aims to understand the relationships between performance versus resource costs under extensive network heterogeneity, across the full cycle from (federated) training to (collaborative) inference. 
+		On the training side, my recent work develops control and optimization methodologies for understudied forms of edge/fog heterogeneity, e.g., data-feature heterogeneity in dynamic networks, and proposes novel techniques  such as device-to-device cooperation to inform intelligent device sampling. 
+		Most recently, my emerging work has begun to explore performance–resource balancing across edge–cloud systems to enable LLM inference.
+		Experimentally, these proposed methodologies yielded up to 50% improved resource efficiency, while even offering performance improvements.
       </p>
 	
 	
       <div class="paper-list">
 
-	  <strong>Selected Publications</strong>
+	  <strong>Select/Recent Work</strong>
 
         <article class="paper">
           <div>
@@ -211,9 +217,11 @@
       <h2>Towards AI-Native Wireless <br> Communications in 6G / NextG</h2>
 
       <p>
-		The coupled growth of machine learning and of communication pervasiveness across devices is unlocking new capabilities for wireless networks, as evidenced by systems that convey meaning rather than bits, or that sense and classify the spectrum they operate in. 
-		Neither the extent of these capabilities nor the core principles underlying them are yet well understood, presenting an opportunity to establish what machine intelligence native to 6G/NextG systems should look like. 
-		In doing so, we must contend with the distributed nature of such systems, which feature varying computation, data statistics, and channel conditions across network devices.
+		The growth of ML alongside that of edge/fog device communications is unlocking new capabilities for wireless networks, such as semantic communication or automatic modulation classification.  
+		<!-- evidenced by systems that convey meaning rather than bits or that sense and classify the spectrum they operate in. -->
+		Neither the extent of these capabilities nor the core principles underlying them are yet well understood. 
+		Thus, there are opportunities to establish what machine intelligence native to 6G/NextG systems should look like. 
+		To do so, we must also contend with the distributed nature of such systems, which feature varying computation, data statistics, and channel conditions across network devices.
       </p>
 		
 	<!-- I take the opposite view: that the <em>structure</em> of a wireless problem &mdash; its physics, its
@@ -229,8 +237,9 @@
 	-->
 	
       <p>
-		I am developing methodologies that pair learning with the physical and network layers of wireless systems. 
-		In the following representative works, I have investigated holographic beamforming for semantic communications, where reconfigurable surfaces are paired with learned encoding and decoding to shape what a transmitter conveys rather than only how it conveys it. Additionally, I have introduced FL methodologies for signal classification, characterizing them in the presence of evasion attacks crafted at the physical layer. 
+		I am developing methodologies that pair learning with wireless systems. 
+		In the following representative works, I have investigated holographic beamforming for semantic communications, where reconfigurable surfaces are paired with ML encoders/decoders to shape transmissions.  
+		Additionally, I have introduced FL methodologies for signal classification, characterizing them in the presence of evasion attacks crafted at the physical layer. 
 		Most recently, I have sought to further develop AI-native wireless systems, by adapting concepts from federated systems towards distributed Airy beamforming. 
       </p>
 		
@@ -238,6 +247,8 @@
 	-->
 		
       <div class="paper-list">
+
+	  <strong>Select/Recent Work</strong>
 
         <article class="paper">
           <div>
@@ -306,9 +317,15 @@
 		Here, I have focused on advising mentees, including undergraduates at Princeton and Ph.D. collaborators at various institutions, in two main directions: (a) distributed and federated intelligence as a foundation for general cyber physical systems and (b) practical applications of machine learning, specifically federated unlearning and fast implementations on low-cost hardware (e.g., commoditized MCUs). 
       </p>
 		
+	<figure class="research-figure">
+	  <img src="assets/vfl_diag.jpg" alt="Describe what the diagram shows" />
+	  <figcaption>One line explaining the figure.</figcaption>
+	</figure>		
+		
 	  <!-- 		communication-efficient multimodal federated learning, controllable LLM offloading and routing for edge deployment, federated unlearning for generative models, and low-cost RF fingerprinting via TinyML. -->
 
       <div class="paper-list">
+		<strong>Select/Recent Work</strong>
 
         <article class="paper">
           <div>
@@ -360,6 +377,8 @@
 
       </div><!-- /.paper-list -->
 
+
+	<!-- 
       <p>
         For a complete and up-to-date list of publications, please see my
         <a href="https://scholar.google.com/citations?user=_dNSQR4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -368,7 +387,8 @@
 
       <a href="index.html#contact" class="btn">Get in touch &rarr;</a>
     </section>
-
+	-->
+	
   </main>
 </div><!-- /.site-wrapper -->
 
