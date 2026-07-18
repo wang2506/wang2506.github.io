@@ -30,7 +30,7 @@ body {
   display: grid;
   grid-template-columns: 220px 1fr;
   min-height: 100vh;
-  max-width: 1080px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -168,7 +168,7 @@ main { padding: 3rem 0 4rem 3rem; }
 .hero-text p {
   font-size: 1rem;
   color: var(--charcoal-mid);
-  max-width: 620px;
+  max-width: none;
   line-height: 1.55;
   margin-bottom: 0.75rem;
 }
@@ -234,7 +234,7 @@ section h2 {
 section > p {
   color: var(--charcoal-mid);
   margin-bottom: 1.25rem;
-  max-width: 620px;
+  max-width: none;
 }
 
 section > p a { color: var(--terra); text-decoration: none; }
@@ -318,9 +318,11 @@ section > p a:hover { text-decoration: underline; }
 
 /* ── Research figures ── */
 .research-figure {
-  max-width: 420px;
+  max-width: none;
   margin: 0 0 1.5rem;
 }
+
+/* ── Research 420px figures ── */
 
 .research-figure img {
   width: 100%;
@@ -334,6 +336,46 @@ section > p a:hover { text-decoration: underline; }
   color: var(--charcoal-light);
   line-height: 1.5;
   margin-top: 0.5rem;
+}
+
+/* ── Text wrapping around a figure (thread intro layout) ── */
+/* Put the <figure> FIRST inside .text-figure, followed by the paragraphs.
+   The figure floats right; the paragraphs flow beside it and then fill the
+   full width below it. The heading above and .paper-list below are unaffected. */
+.text-figure {
+  margin-bottom: 1.25rem;
+}
+
+.text-figure::after {          /* contain the float within the block */
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.text-figure .research-figure {
+  float: right;
+  width: 42%;
+  max-width: 460px;
+  margin: 0.25rem 0 1rem 2rem; /* space to the LEFT of and BELOW the figure */
+}
+
+/* Paragraphs fill the column and wrap around the floated figure. */
+.text-figure p {
+  color: var(--charcoal-mid);
+  max-width: none;
+  margin-bottom: 1.25rem;
+}
+.text-figure p:last-child { margin-bottom: 0; }
+.text-figure p a { color: var(--terra); text-decoration: none; }
+.text-figure p a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+  .text-figure .research-figure {
+    float: none;
+    width: auto;
+    max-width: 420px;
+    margin: 0 0 1.5rem;
+  }
 }
 
 
